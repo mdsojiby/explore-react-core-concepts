@@ -15,12 +15,55 @@
 //     }
    
 // }
-
-
 // conditional rendering option 2
+// export default function Todo({task,isDone}){
+//     if (isDone){
+//         return <li>Finished:{task}</li>
+//     }
+//     return <li>Not Finished:{task}</li>
+// }
+
+// conditional rending option 3
+
+// export default function Todo({task,isDone}){
+   
+//     return(
+//         <li>{isDone ? 'Finished': 'Do it'}:{task}</li>
+//     )
+// }
+
+// // condition rending option 4 &&
+
+// export default function Todo({task,isDone}){
+   
+//     return(
+//         <li>{task}{isDone && ':Done'}</li>
+//     )
+// }
+
+// condition rending option 5 ||
+
+// export default function Todo({task,isDone}){
+   
+//     return(
+//         <li>{task}{isDone || ':Done'}</li>
+//     )
+// }
+
+// conditional rendering option 6
 export default function Todo({task,isDone}){
+    let listItem;
     if (isDone){
-        return <li>Finished:{task}</li>
+        listItem= <li>Finished:{task}</li>
     }
-    return <li>Noot Finished:{task}</li>
+    else{
+        listItem= <li>Not Finished:{task}</li>  
+    }
+    return listItem
+    
 }
+
+
+
+
+
